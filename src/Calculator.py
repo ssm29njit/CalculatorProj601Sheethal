@@ -16,6 +16,8 @@ def division(a, b):
 def squaring(a):
     return float(a) * float(a)
 
+def rooting(a):
+    return math.sqrt(a)
 
 class Calculator:
     result = 0
@@ -41,4 +43,8 @@ class Calculator:
 
     def square(self, a):
         self.result = squaring(a)
+        return self.result
+
+    def root(self, a):
+        self.result = rooting(a)
         return self.result

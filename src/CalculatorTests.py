@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_results_property_calculator(self):
-        self.assertEqual(self.calculator.result, 9)
+        self.assertEqual(self.calculator.result, 1)
 
     def test_add_method_calculator(self):
         test_data = CsvReader('UnitTestAddition.csv').data
@@ -45,6 +45,12 @@ class MyTestCase(unittest.TestCase):
         pprint(test_data)
         self.assertEqual(self.calculator.square(3), 9)
         self.assertEqual(self.calculator.result, 9)
+
+    def test_root_method_calculator(self):
+        test_data = CsvReader('UnitTestSquareRoot.csv').data
+        pprint(test_data)
+        self.assertEqual(self.calculator.root(4), 2)
+        self.assertEqual(self.calculator.result, 2)
 
 
 if __name__ == '__main__':
