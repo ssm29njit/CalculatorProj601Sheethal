@@ -1,7 +1,5 @@
-FROM python:3
+FROM python:3.7
 
-ADD src/my_script.py /
+ADD src /src
 
-RUN pip install pystrich
-
-CMD [ "python", "./my_script.py" ]
+CMD ["python", "./src/calculatorTests.py"]
